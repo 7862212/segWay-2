@@ -36,7 +36,7 @@ $responsiveType: 1;
 $containerWidth: $maxWidthContainer + $containerPadding; // Ширина срабатывания первого брейкпоинта
 
 // Брейк-поинты
-$pc: em($containerWidth);  //(пк, ноуты, планшеты в горизонтальном положении)
+//$pc: em($containerWidth);  //(пк, ноуты, планшеты в горизонтальном положении)
 $tablet: em(991.98);  //Планшеты и некоторые телв горизонт положении
 $mobile: em(767.98);  //телефоны
 $mobileSmall: em(479.98);  // Телефоны S
