@@ -98,14 +98,14 @@ document.addEventListener('DOMContentLoaded', () => { // Структура ст
 
 		const getActiveTabName = () => { // объявляем функцию для получения названия активной вкладки
 			return tab.querySelector('.tabs-kickscooter__tab-kickscooter_active').dataset.tab // возвращаем значение data-tab активной кнопки
-		}
+		};
 
 		const setActiveContent = () => { // объявляем функцию для установки активного элемента контента
 			if (content.querySelector('.contents-kickscooter__content-kickscooter_active')) { // если уже есть активный элемент контента
 				content.querySelector('.contents-kickscooter__content-kickscooter_active').classList.remove('contents-kickscooter__content-kickscooter_active') // то скрываем его
 			}
 			content.querySelector(`[data-tab=${getActiveTabName()}]`).classList.add('contents-kickscooter__content-kickscooter_active') // затем ищем элемент контента, у которого значение data-tab совпадает со значением data-tab активной кнопки и отображаем его
-		}
+		};
 
 		// проверяем при загрузке страницы, есть ли активная вкладка
 		if (!tab.querySelector('.tabs-kickscooter__tab-kickscooter_active')) {  // если активной вкладки нет
@@ -126,8 +126,8 @@ document.addEventListener('DOMContentLoaded', () => { // Структура ст
 			caption.classList.add('tabs-kickscooter__tab-kickscooter_active') // затем добавляем активный класс кнопке, на которой был клик
 
 			setActiveContent(getActiveTabName()) // устанавливаем активный элемент контента в соответствии с активной кнопкой
-		})
-	}
+		});
+	};
 	tabs() // вызываем основную функцию
 });
 
@@ -240,6 +240,15 @@ document.addEventListener('DOMContentLoaded', () => { // Структура ст
 
 	tabs(
 		'.tabs-warranty_t15',
+		'.tabs-warranty__head',
+		'.tabs-warranty__body',
+		'.tabs-warranty__tab-warranty',
+		'tabs-warranty__tab-warranty_active',
+		'tabs-warranty__content-warranty_active'
+	) // вызываем основную функцию tabs для зелёных вкладок .about__tabs
+
+	tabs(
+		'.tabs-warranty_finish',
 		'.tabs-warranty__head',
 		'.tabs-warranty__body',
 		'.tabs-warranty__tab-warranty',
